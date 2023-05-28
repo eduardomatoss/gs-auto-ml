@@ -1,0 +1,19 @@
+version: "3.4"
+services:
+  gs-auto-ml:
+    tty: true
+    image: "eduardomatoss/gs-auto-ml"
+    stdin_open: true
+    build:
+      context: .
+      target: "development"
+    volumes:
+      - ".:/app"
+    ports:
+      - "5000:5000"
+    networks:
+      - db_nw
+
+networks:
+  db_nw:
+    driver: bridge
