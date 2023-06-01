@@ -7,6 +7,8 @@ name = "pypi"
 flask = "==2.3.2"
 waitress = "==2.1.2"
 matplotlib = "==3.7.1"
+pycaret = "==3.0.2"
+pandas = "==1.5.3"
 
 [dev-packages]
 black = "==23.3.0"

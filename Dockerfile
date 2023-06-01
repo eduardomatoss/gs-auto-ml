@@ -4,6 +4,8 @@ WORKDIR /app
 
 EXPOSE 5000
 
+RUN apt-get update && apt-get install libgomp1
+
 COPY Pipfile .
 RUN pip install pipenv
 
@@ -16,4 +18,5 @@ COPY . .
 
 FROM dependencies AS production
 COPY app app
+COPY model model
 COPY run.py .
