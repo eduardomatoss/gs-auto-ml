@@ -1,9 +1,7 @@
-from os import path
-
 from flask import Blueprint
 from flask import request
 from flask import render_template
-from pycaret.regression import *
+from pycaret.regression import load_model
 import pandas as pd
 
 
