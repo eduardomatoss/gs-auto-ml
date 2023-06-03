@@ -29,7 +29,7 @@ local/shell:
 	pipenv shell
 
 local/run:
-	python run.py
+	streamlit run run.py
 
 ############################################
 # COMMANDS TO RUN USING DOCKER (RECOMMENDED)
@@ -59,7 +59,7 @@ docker/verify:
 	make docker/bandit
 
 docker/run:
-	CURRENT_UID=${DOCKER_USER} docker-compose run --service-port ${APP_NAME} python run.py
+	CURRENT_UID=${DOCKER_USER} docker-compose run --service-port ${APP_NAME} streamlit run run.py
 
 ##################
 # HELPFUL COMMANDS

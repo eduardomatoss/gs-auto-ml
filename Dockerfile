@@ -2,7 +2,7 @@ FROM python:3.10.10-slim AS base
 
 WORKDIR /app
 
-EXPOSE 5000
+EXPOSE 8501
 
 RUN apt-get update && apt-get install libgomp1
 
