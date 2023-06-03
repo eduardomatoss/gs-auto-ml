@@ -14,8 +14,7 @@ Project developed for the Global Solution of the Automated Machine Learning &amp
 - [Docker](https://www.docker.com/get-started) - **pre-requisite**
 - [Docker Compose](https://docs.docker.com/compose/) - **pre-requisite**
 - [Pipenv](https://github.com/pypa/pipenv)
-- [Flask](https://flask.palletsprojects.com/en/2.3.x)
-- [Waitress](https://docs.pylonsproject.org/projects/waitress/en/latest/index.html)
+- [Streamlit](https://streamlit.io)
 
 *Please pay attention on **pre-requisites** resources that you must install/configure.*
 
@@ -38,9 +37,7 @@ make local/run
 make docker/run
 ```
 
-*The project will be running at `http://localhost:5000/`*
-
-The `entrypoint` of this project is the `run.py` file on the root path.
+*The project will be running at `http://localhost:8501/`*
 
 ### How to lint
 
