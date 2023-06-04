@@ -21,9 +21,14 @@ def page():
         df_predict["Ano_Plantio"] = st.number_input("Ano Plantio")
         df_predict["Area"] = st.number_input("Area")
 
-        submitted = st.form_submit_button("Submit")
+        submitted = st.form_submit_button("Estimar")
         if submitted:
+            valid_data = [data for data in df_predict.values() if data]
+
+            if not valid_data:
+                return st.error("Valores invalidos, por favor revisar")
+
             df = pd.DataFrame(df_predict)
             predict_result = model.predict(df)
             predict_result = "%.2f" % predict_result
-            st.success(f"Producao Estimada: {predict_result}")
+            return st.success(f"Producao Estimada: {predict_result}")
